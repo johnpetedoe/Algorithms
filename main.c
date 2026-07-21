@@ -1,6 +1,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/*
+    TODO : CONTROL THE SIZE OF THE SECONDARY INTERVAL
+    TODO : DECOUPLE LOCATIONS
+*/
 int f_strlen (char *s) {
     int i;
 
@@ -47,10 +51,6 @@ void f_putnbr (long long n) {
     } 
 }
 
-/*
-**
-*/
-
 char *f_itoa (int n) {
     int tmp;
     int degree;
@@ -86,7 +86,7 @@ char *f_itoa (int n) {
 
 void format_time (int t, int interval) {
     int time;
-
+    
     time = t / interval;
     
     if (time < 10) {
@@ -111,7 +111,7 @@ int main (int argc, char **argv) {
         f_putstr(argv[0]);
         return (0);
     }
-    
+
     int i;
     int n;
     int interval;
