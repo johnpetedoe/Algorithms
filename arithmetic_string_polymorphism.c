@@ -18,6 +18,12 @@ string  add_s0_s1(
 
 }
 
+bool    implies (t_system *fs
+    bool f_1, 
+    bool f_2
+) {
+
+}
 
 int main (int argc char **argv) {
     valist  ap;
@@ -48,18 +54,43 @@ int main (int argc char **argv) {
     );
 
     assert(
-        implies(
-            and(
-                equal_s0_s1( multiply_s0_i1(a, 2), "aa"),
-                equal_s0_s1( multiply_s0_i1(b, 2), "bb")
-            ),
-            equal_s0_s1( 
-                add_s0_s1 (
-                    multiply_s0_i1(b, 2),
-                    multiply_s0_i1(a, 2)
+        equal_b0_b1(
+            implies(
+                and(
+                    equal_s0_s1( multiply_s0_i1(a, 2), "aa"),
+                    equal_s0_s1( multiply_s0_i1(b, 2), "bb")
                 ),
-                "aabb"
+                equal_s0_s1( 
+                    add_s0_s1 (
+                        multiply_s0_i1(b, 2),
+                        multiply_s0_i1(a, 2)
+                    ),
+                    "aabb"
+                )
+            ),
+            true  
+        )
+    );
+
+    assert(
+        equal_b0_b1(
+            equal_b0_b1(
+                implies(
+                    and(
+                        equal_s0_s1( multiply_s0_i1(a, 2), "aa"),
+                        equal_s0_s1( multiply_s0_i1(b, 2), "bb")
+                    ),
+                    equal_s0_s1( 
+                        add_s0_s1 (
+                            multiply_s0_i1(b, 2),
+                            multiply_s0_i1(a, 2)
+                        ),
+                        "aabb"
+                    )
+                ),
+                false  
             )
+            false
         )
     );
 
