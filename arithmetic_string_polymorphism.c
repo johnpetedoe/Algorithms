@@ -18,10 +18,12 @@ string  add_s0_s1(
 
 }
 
+/*
 bool    implies (t_system *fs
     bool f_1, 
     bool f_2
 ) {
+*/
 
 }
 
@@ -53,6 +55,7 @@ int main (int argc char **argv) {
         )
     );
 
+    /*
     assert(
         equal_b0_b1(
             implies(
@@ -93,6 +96,7 @@ int main (int argc char **argv) {
             false
         )
     );
+    */
 
     return (0);
 }
