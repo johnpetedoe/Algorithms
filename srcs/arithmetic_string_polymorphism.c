@@ -1,31 +1,11 @@
 #include <stdarg.h>
 #include <assert.h>
+#include "./includes/operators.h"
+//#include "./includes/tests.h"
 
 typedef enum { true, false }    bool;
 typedef char*                   string;
 
-bool    equal_s0_s1(
-    string s0,
-    string s1
-) {
-    
-}
-
-string  add_s0_s1(
-    string s0, 
-    string s1
-) {
-
-}
-
-/*
-bool    implies (t_system *fs
-    bool f_1, 
-    bool f_2
-) {
-*/
-
-}
 
 int main (int argc char **argv) {
     valist  ap;
